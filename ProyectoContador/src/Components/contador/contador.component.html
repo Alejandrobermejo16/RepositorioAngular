@@ -1,2 +1,45 @@
-<p>contador works!</p>
-<p>contador works!</p>
+HIJO
+
+<p>Numero Actual: {{contador}}</p>
+<p>Nombre: {{nombre}}</p>
+<p>Aptitudes: {{oficio.Actitudes}}</p>
+<p>Preparado: {{preparado}}</p>
+
+<button (click)="ganasdePulsarElBoton()">Aumenta Contador</button>
+
+
+<!-- primero mostramos el nombre con el valor inicial-->
+
+
+
+<h3>{{ name }}</h3>
+<input type="text" [(ngModel)]="name"> 
+<!-- Despues le cambiamos el valor a ese nombre con un input -->
+
+
+<div *ngFor="let item of items">
+    {{ item }}
+  </div>
+
+
+  <!-- Directiva Estructural, Muestra o no un componente en funcion de la condicion -->
+  <div *ngIf="items.includes('Item 1')">
+    Esta lista solo se mostrará si items tiene el valor de item1.
+  </div>
+
+
+  <div *ngFor="let clave of dataOficio">
+    {{ clave }}
+  </div>
+
+
+
+  
+
+  <button mat-raised-button (click)="goBack()">Volver</button>
+
+
+  HIJO
+
+
+  <app-formulario-reactivo></app-formulario-reactivo>
