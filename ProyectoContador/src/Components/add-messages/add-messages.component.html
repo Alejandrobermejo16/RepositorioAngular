@@ -1,0 +1,18 @@
+<p>Componente Añadir mensajes</p>
+
+
+
+<form (ngSubmit)="addMessage()">
+    <label>Ingrese un mensaje</label>
+    <!--Añadir import de FormModule y poner el message bidireccional -->
+    <input type="text" placeholder="Pon tu mensaje" name="message" [(ngModel)]="message">
+    <button>Agregar</button>
+</form>
+
+
+
+<!-- de esta manera interpolando , accedemos a la prop de un servicio y para mostrarla utilizamos el formato json -->
+<!--Añadir import de CommonModule-->
+<h1>{{ messagesService.messages | json }}</h1>
+
+

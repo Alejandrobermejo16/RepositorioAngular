@@ -4,6 +4,10 @@ import { CommonModule } from '@angular/common';
 import { RouterModule, Router } from '@angular/router';
 import { ReactiveFormsModule } from '@angular/forms';
 import { FormularioReactivoComponent } from "../formulario-reactivo/formulario-reactivo.component";
+import {MatButtonModule} from '@angular/material/button';
+import { AddMessagesComponent } from "../add-messages/add-messages.component";
+import { ListMessagesComponent } from "../list-messages/list-messages.component";
+import { RecogeEstadosComponent } from "../recoge-estados/recoge-estados.component";
 
 
 @Component({
@@ -11,7 +15,7 @@ import { FormularioReactivoComponent } from "../formulario-reactivo/formulario-r
     standalone: true,
     templateUrl: './contador.component.html',
     styleUrl: './contador.component.css',
-    imports: [FormsModule, CommonModule, RouterModule, ReactiveFormsModule, FormularioReactivoComponent]
+    imports: [FormsModule, CommonModule, RouterModule, ReactiveFormsModule, FormularioReactivoComponent, MatButtonModule, AddMessagesComponent, ListMessagesComponent, RecogeEstadosComponent]
 })
 export class ContadorComponent {
 [x: string]: any;

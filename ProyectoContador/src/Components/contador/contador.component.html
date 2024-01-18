@@ -1,9 +1,12 @@
-HIJO
 
-<p>Numero Actual: {{contador}}</p>
-<p>Nombre: {{nombre}}</p>
-<p>Aptitudes: {{oficio.Actitudes}}</p>
-<p>Preparado: {{preparado}}</p>
+
+<h1>Numero Actual: {{contador}}</h1>
+
+<h1>{{nombre | uppercase}}</h1>
+
+<h2>Aptitudes: {{oficio.Actitudes | uppercase}}</h2>
+
+<h3>Preparado: {{preparado}}</h3>
 
 <button (click)="ganasdePulsarElBoton()">Aumenta Contador</button>
 
@@ -13,33 +16,44 @@ HIJO
 
 
 <h3>{{ name }}</h3>
-<input type="text" [(ngModel)]="name"> 
+<input type="text" [(ngModel)]="name">
 <!-- Despues le cambiamos el valor a ese nombre con un input -->
 
 
 <div *ngFor="let item of items">
-    {{ item }}
-  </div>
+  {{ item }}
+</div>
 
 
-  <!-- Directiva Estructural, Muestra o no un componente en funcion de la condicion -->
-  <div *ngIf="items.includes('Item 1')">
-    Esta lista solo se mostrará si items tiene el valor de item1.
-  </div>
+<!-- Directiva Estructural, Muestra o no un componente en funcion de la condicion -->
+<div *ngIf="items.includes('Item 1')">
+  Esta lista solo se mostrará si items tiene el valor de item1.
+</div>
 
 
-  <div *ngFor="let clave of dataOficio">
-    {{ clave }}
-  </div>
+<div *ngFor="let clave of dataOficio">
+  {{ clave }}
+</div>
+
+
+<button mat-button color="primary" mat-raised-button (click)="goBack()">Volver
+  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-return-left"
+    viewBox="0 0 16 16">
+    <path fill-rule="evenodd"
+      d="M14.5 1.5a.5.5 0 0 1 .5.5v4.8a2.5 2.5 0 0 1-2.5 2.5H2.707l3.347 3.346a.5.5 0 0 1-.708.708l-4.2-4.2a.5.5 0 0 1 0-.708l4-4a.5.5 0 1 1 .708.708L2.707 8.3H12.5A1.5 1.5 0 0 0 14 6.8V2a.5.5 0 0 1 .5-.5" />
+  </svg>
+</button>
+HIJO
+
+
+<app-formulario-reactivo></app-formulario-reactivo>
+
+
+<h1>Servicios</h1>
+<app-add-messages></app-add-messages>
+<app-list-messages></app-list-messages>
 
 
 
-  
-
-  <button mat-raised-button (click)="goBack()">Volver</button>
-
-
-  HIJO
-
-
-  <app-formulario-reactivo></app-formulario-reactivo>
+REDUX 
+<app-recoge-estados></app-recoge-estados>
